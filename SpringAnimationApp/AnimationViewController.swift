@@ -30,17 +30,14 @@ final class AnimationViewController: UIViewController {
         super.viewDidLoad()
         getRandomAnimationValues()
         updateLabels()
-        setAnimationView()
+        setupAnimationView()
     }
     
     // MARK: - IB Action
     @IBAction func runButtonAction(_ sender: SpringButton) {
         updateLabels()
-        
         setupAnimation(for: animationView)
-        
         getRandomAnimationValues()
-        
         changeButtonTitle(button: sender)
     }
     
@@ -70,7 +67,7 @@ final class AnimationViewController: UIViewController {
         view.animate()
     }
     
-    private func setAnimationView() {
+    private func setupAnimationView() {
         animationView.layer.cornerRadius = 10
     }
     
