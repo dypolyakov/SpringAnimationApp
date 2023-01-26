@@ -45,8 +45,8 @@ final class AnimationViewController: UIViewController {
     private func getRandomAnimationValues() {
         preset = AnimationPreset.allCases.randomElement()?.rawValue ?? "pop"
         curve = AnimationCurve.allCases.randomElement()?.rawValue ?? "easeIn"
-        force = CGFloat.random(in: 0...1.5)
-        duration = CGFloat.random(in: 0...1.5)
+        force = CGFloat.random(in: 0.3...1.5)
+        duration = CGFloat.random(in: 0.3...1.5)
         delay = CGFloat.random(in: 0...0.5)
     }
     
