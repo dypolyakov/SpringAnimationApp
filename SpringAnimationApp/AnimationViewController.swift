@@ -22,10 +22,10 @@ final class AnimationViewController: UIViewController {
     private var animation = Animation.getRandomAnimations()
     
     // MARK: - Override Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        animationView.layer.cornerRadius = 10
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        animationView.layer.cornerRadius = 10
+//    }
     
     // MARK: - IB Action
     @IBAction func runButtonAction(_ sender: SpringButton) {

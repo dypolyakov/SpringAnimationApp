@@ -33,6 +33,11 @@
                                     <constraint firstAttribute="bottom" secondItem="dgz-Kh-SPH" secondAttribute="bottom" constant="16" id="b7y-K5-Zbt"/>
                                     <constraint firstAttribute="trailing" secondItem="dgz-Kh-SPH" secondAttribute="trailing" constant="16" id="plN-mD-V5r"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-sk-ENN" customClass="SpringButton" customModule="SpringAnimation">
                                 <rect key="frame" x="39.333333333333343" y="703.66666666666663" width="314.33333333333326" height="34.333333333333371"/>
