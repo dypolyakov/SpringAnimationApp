@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47665F3D2983E8B700083F4F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47665F3C2983E8B700083F4F /* Animation.swift */; };
+		47665F3F2983EA2F00083F4F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47665F3E2983EA2F00083F4F /* DataStore.swift */; };
 		47744D05298128E20010328B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47744D04298128E20010328B /* AppDelegate.swift */; };
 		47744D07298128E20010328B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47744D06298128E20010328B /* SceneDelegate.swift */; };
 		47744D09298128E20010328B /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47744D08298128E20010328B /* AnimationViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47665F3C2983E8B700083F4F /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		47665F3E2983EA2F00083F4F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		47744D01298128E20010328B /* SpringAnimationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringAnimationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47744D04298128E20010328B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47744D06298128E20010328B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +65,9 @@
 				47744D04298128E20010328B /* AppDelegate.swift */,
 				47744D06298128E20010328B /* SceneDelegate.swift */,
 				47744D08298128E20010328B /* AnimationViewController.swift */,
+				47665F3C2983E8B700083F4F /* Animation.swift */,
 				47744D0A298128E20010328B /* Main.storyboard */,
+				47665F3E2983EA2F00083F4F /* DataStore.swift */,
 				47744D0D298128E30010328B /* Assets.xcassets */,
 				47744D0F298128E30010328B /* LaunchScreen.storyboard */,
 				47744D12298128E30010328B /* Info.plist */,
@@ -148,6 +154,8 @@
 			files = (
 				47744D09298128E20010328B /* AnimationViewController.swift in Sources */,
 				47744D05298128E20010328B /* AppDelegate.swift in Sources */,
+				47665F3D2983E8B700083F4F /* Animation.swift in Sources */,
+				47665F3F2983EA2F00083F4F /* DataStore.swift in Sources */,
 				47744D07298128E20010328B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

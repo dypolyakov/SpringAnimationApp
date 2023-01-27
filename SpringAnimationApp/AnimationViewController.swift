@@ -12,67 +12,31 @@ final class AnimationViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var animationView: SpringView!
-    @IBOutlet var presetLabel: UILabel!
-    @IBOutlet var curveLabel: UILabel!
-    @IBOutlet var forceLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var delayLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     
     // MARK: - Private Properties
-    private var preset: String = "pop"
-    private var curve: String = "easeIn"
-    private var force: CGFloat = 1
-    private var duration: CGFloat = 1
-    private var delay: CGFloat = 0
+    var animation = Animation.getRandomAnimations()
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        getRandomAnimationValues()
-        updateLabels()
-        setupAnimationView()
+        descriptionLabel.text = animation.description
+        animationView.layer.cornerRadius = 10
     }
     
     // MARK: - IB Action
     @IBAction func runButtonAction(_ sender: SpringButton) {
-        updateLabels()
-        setupAnimation(for: animationView)
-        getRandomAnimationValues()
-        changeButtonTitle(button: sender)
+        descriptionLabel.text = animation.description
+        
+        animationView.animation = animation.preset
+        animationView.curve =  animation.curve
+        animationView.force = animation.force
+        animationView.duration = animation.duration
+        animationView.delay = animation.delay
+        animationView.animate()
+        
+        animation = Animation.getRandomAnimations()
+        
+        sender.setTitle("Run \(animation.preset)", for: .normal)
     }
-    
-    // MARK: - Private Methods
-    private func getRandomAnimationValues() {
-        preset = AnimationPreset.allCases.randomElement()?.rawValue ?? "pop"
-        curve = AnimationCurve.allCases.randomElement()?.rawValue ?? "easeIn"
-        force = CGFloat.random(in: 0.3...1.5)
-        duration = CGFloat.random(in: 0.3...1.5)
-        delay = CGFloat.random(in: 0...0.5)
-    }
-    
-    private func updateLabels() {
-        presetLabel.text = preset
-        curveLabel.text = curve
-        forceLabel.text = String(format: "%.2f", force)
-        durationLabel.text = String(format: "%.2f", duration)
-        delayLabel.text = String(format: "%.2f", delay)
-    }
-    
-    private func setupAnimation(for view: SpringView) {
-        view.animation = preset
-        view.curve =  curve
-        view.force = force
-        view.duration = duration
-        view.delay = delay
-        view.animate()
-    }
-    
-    private func setupAnimationView() {
-        animationView.layer.cornerRadius = 10
-    }
-    
-    private func changeButtonTitle(button: SpringButton) {
-        button.setTitle("Run \(preset)", for: .normal)
-    }
-    
 }
