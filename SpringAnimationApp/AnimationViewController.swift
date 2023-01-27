@@ -21,12 +21,6 @@ final class AnimationViewController: UIViewController {
     // MARK: - Private Properties
     private var animation = Animation.getRandomAnimations()
     
-    // MARK: - Override Methods
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        animationView.layer.cornerRadius = 10
-//    }
-    
     // MARK: - IB Action
     @IBAction func runButtonAction(_ sender: SpringButton) {
         descriptionLabel.text = animation.description
