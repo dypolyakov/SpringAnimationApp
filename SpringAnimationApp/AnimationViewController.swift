@@ -15,7 +15,7 @@ final class AnimationViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     
     // MARK: - Private Properties
-    var animation = Animation.getRandomAnimations()
+    private var animation = Animation.getRandomAnimations()
     
     // MARK: - Override Methods
     override func viewDidLoad() {
