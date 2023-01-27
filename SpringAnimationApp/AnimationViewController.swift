@@ -12,7 +12,11 @@ final class AnimationViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var animationView: SpringView!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel! {
+        didSet {
+            descriptionLabel.text = animation.description
+        }
+    }
     
     // MARK: - Private Properties
     private var animation = Animation.getRandomAnimations()
@@ -20,7 +24,6 @@ final class AnimationViewController: UIViewController {
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionLabel.text = animation.description
         animationView.layer.cornerRadius = 10
     }
     
